@@ -1,0 +1,26 @@
+{
+    "$schema": "https://json.schemastore.org/package.json",
+    "name": "pnpm-deploy-issues",
+    "private": true,
+    "description": "A monorepo using pnpm@7.30.5",
+    "packageManager": "pnpm@7.30.5",
+    "engines": {
+      "node": "16.13.1",
+      "pnpm": "7.30.5"
+    },
+    "volta": {
+      "node": "16.13.1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/supersabillon/pnpm-deploy-issues"
+    },
+    "scripts": {
+        "clean": "pnpm -r clean && rm -rf node_modules target",
+        "deploy-app": "pnpm --filter docs --prod deploy ./target"
+    },
+    "devDependencies": {
+      "turbo": "1.7.0"
+    }
+  }
+  
